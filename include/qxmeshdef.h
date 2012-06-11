@@ -14,7 +14,7 @@ public:
 
   QxMeshDef(const QPolygonF &boundary,
             const QList<QPolygonF> &holes = QList<QPolygonF>(),
-            const QVector<QPointF> &points = QVector<QPointF>());
+            const QList<QPointF> &points = QList<QPointF>());
 
   QxMeshDef(const QxMeshDef &other);
 
@@ -34,7 +34,7 @@ public:
 
   QPolygonF boundary;
   QList<QPolygonF> holes;
-  QVector<QPointF> points;
+  QList<QPointF> points;
 };
 
 #endif // QXMESHDEF_H

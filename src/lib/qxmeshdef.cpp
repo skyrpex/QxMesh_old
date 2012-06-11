@@ -2,6 +2,7 @@
 #include <QxPotrace>
 #include <QxPSimpl>
 #include <QxClipper>
+#include <QxPoly2Tri>
 #include <QDebug>
 
 QxMeshDef::QxMeshDef()
@@ -11,7 +12,7 @@ QxMeshDef::QxMeshDef()
 
 QxMeshDef::QxMeshDef(const QPolygonF &boundary,
                      const QList<QPolygonF> &holes,
-                     const QVector<QPointF> &points) :
+                     const QList<QPointF> &points) :
   boundary(boundary),
   holes(holes),
   points(points)
@@ -29,8 +30,13 @@ QxMeshDef::QxMeshDef(const QxMeshDef &other) :
 
 QxMesh QxMeshDef::mesh() const
 {
-  QxMesh mesh;
+  QxPoly2Tri p2t;
+  if(!p2t.triangulate(boundary, holes, points))
+    return QxMesh();
 
+  QxMesh mesh;
+  mesh.indices = p2t.indices();
+  mesh.vertices = p2t.points();
   return mesh;
 }
 

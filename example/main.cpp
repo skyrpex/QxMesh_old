@@ -31,25 +31,26 @@ int main(int argc, char *argv[])
     def.simplifyByVertexCount(40);
 
     // Draw the triangles
-//    QxMesh mesh = def.mesh();
-//    for(int i = 2; i < mesh.indices.count(); i+=3)
-//    {
-//      int index0 = mesh.indices[i-2];
-//      int index1 = mesh.indices[i-1];
-//      int index2 = mesh.indices[i];
-
-//      QPolygonF triangle;
-//      triangle << mesh.vertices[index0]
-//               << mesh.vertices[index1]
-//               << mesh.vertices[index2];
-
-//      scene.addPolygon(triangle);
-//    }
-    scene.addPolygon(def.boundary, QPen(Qt::blue));
-    foreach(const QPolygonF &hole, def.holes)
+    QxMesh mesh = def.mesh();
+    for(int i = 2; i < mesh.indices.count(); i+=3)
     {
-      scene.addPolygon(hole, QPen(Qt::red));
+      int index0 = mesh.indices[i-2];
+      int index1 = mesh.indices[i-1];
+      int index2 = mesh.indices[i];
+
+      QPolygonF triangle;
+      triangle << mesh.vertices[index0]
+               << mesh.vertices[index1]
+               << mesh.vertices[index2];
+
+      scene.addPolygon(triangle);
     }
+
+//    scene.addPolygon(def.boundary, QPen(Qt::blue));
+//    foreach(const QPolygonF &hole, def.holes)
+//    {
+//      scene.addPolygon(hole, QPen(Qt::red));
+//    }
   }
 
   // Show the view
