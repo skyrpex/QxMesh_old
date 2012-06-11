@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
   foreach(QxMeshDef def, QxMeshDef::fromImage(image))
   {
     // Transform our mesh def
-    def.offset(10);
-    def.simplify(40);
+    def.offset(3);
+    def.simplifyByVertexCount(40);
 
     // Draw the triangles
 //    QxMesh mesh = def.mesh();
@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
   }
 
   // Show the view
+  view.scale(2, 2);
   view.show();
 
   return a.exec();

@@ -20,9 +20,15 @@ public:
 
   QxMesh mesh() const;
 
-  void simplify(uint vertices);
+  void simplifyByVertexCount(uint vertexCount);
+
+  void simplifyByTolerance(qreal tolerance);
+
+  QxMeshDef simplified(qreal tolerance) const;
 
   void offset(qreal pixels);
+
+  QxMeshDef offseted(qreal pixels) const;
 
   static QList<QxMeshDef> fromImage(const QImage &image);
 
