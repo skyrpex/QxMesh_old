@@ -1,0 +1,18 @@
+[submodule "libs/QxClipper"]
+	path = src/libs/QxClipper
+	url = git://github.com/Skyrpex/QxClipper.git
+[submodule "libs/QxPotrace"]
+	path = src/libs/QxPotrace
+	url = git://github.com/Skyrpex/QxPotrace.git
+[submodule "src/libs/QxPoly2Tri"]
+	path = src/libs/QxPoly2Tri
+	url = git://github.com/Skyrpex/QxPoly2Tri.git
+[submodule "src/libs/QxPSimpl"]
+	path = src/libs/QxPSimpl
+	url = git://github.com/Skyrpex/QxPSimpl.git
+[submodule "src/libs/QxPotrace"]
+	path = src/libs/QxPotrace
+	url = git://github.com/Skyrpex/QxPotrace.git
+[submodule "src/libs/QxClipper"]
+	path = src/libs/QxClipper
+	url = git://github.com/Skyrpex/QxClipper.git
