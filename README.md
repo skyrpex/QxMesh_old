@@ -1,7 +1,7 @@
 QxMesh
 ======
 
-2D mesh library for Qt
+2D mesh library for Qt.
 
 What can you do
 ---------------
@@ -13,17 +13,17 @@ What can you do
 Libraries used
 --------------
 
-- [Potrace](http://potrace.sourceforge.net)
-Image to polygon library.
+- [QxClipper](https://github.com/Skyrpex/QxClipper)
+Polygon clipping library for Qt.
 
-- [psimpl](http://psimpl.sourceforge.net/)
-Generic n-dimensional poyline simplification library.
+- [QxPoly2Tri](https://github.com/Skyrpex/QxPoly2Tri)
+Constrained Delaunay triangulation library for Qt.
 
-- [poly2tri](http://code.google.com/p/poly2tri/)
-2D constrained Delaunay triangulation library.
+- [QxPotrace](https://github.com/Skyrpex/QxPotrace)
+Image to polygon library for Qt.
 
-- [Clipper](http://www.angusj.com/delphi/clipper.php)
-Polygon clipping library.
+- [QxPSimpl](https://github.com/Skyrpex/QxPSimpl)
+Polygon simplification library for Qt.
 
 
 
