@@ -1,4 +1,5 @@
 TARGET = QxMesh
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DESTDIR = $$PWD/../../bin
 TEMPLATE = lib
 DEFINES += QXMESH_LIBRARY
